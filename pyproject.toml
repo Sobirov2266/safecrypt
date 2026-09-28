@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "safecrypt"
+version = "0.1.0"
+description = "Parol asosida fayllarni shifrlash va deshifrlash dasturi"
+requires-python = ">=3.10"
+dependencies = [
+    "cryptography>=42",
+    "argon2-cffi>=23.1",
+    "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov", "ruff", "black"]
+
+[project.scripts]
+safecrypt = "safecrypt.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.black]
+line-length = 88
+
+[tool.ruff]
+line-length = 88
