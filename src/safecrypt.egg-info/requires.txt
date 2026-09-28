@@ -1,9 +1,0 @@
-cryptography>=42
-argon2-cffi>=23.1
-tqdm>=4.66
-
-[dev]
-pytest
-pytest-cov
-ruff
-black
